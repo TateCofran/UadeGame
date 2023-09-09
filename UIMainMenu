@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class UIMainMenu : MonoBehaviour
+{
+    [SerializeField] Button newGame;
+
+    private void Start()
+    {
+        newGame.onClick.AddListener(StartNewGame);
+    }
+    public void StartNewGame()
+    {
+        ScenesManager.instance.LoadNewGame();
+    }
+}
